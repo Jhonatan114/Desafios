@@ -1,0 +1,51 @@
+1ºDesafio:Inverter uma string.
+
+reverseString("Jhonatan")
+function reverseString(str) {
+    var novaString = "";
+    for (var i = str.length - 1; i > -1; i--){
+    novaString += str[i];
+    }
+    return novaString;
+}
+
+2º Desafio:Palíndromo
+
+function isPalPalíndromo(str){
+    return reversestring(str) === str;
+}
+
+3ºDesafio:Caractere mais recorrente
+
+function maxCharacter(str) {
+    var guardaValor = {};
+    for (var i = 0; i < str.length; i++) {
+        if (!guardaValor[str[i]])
+            guardaValor[str[i]] = 1;
+        else
+            guardaValor[str[i]]++;
+    }
+    var charRecorrente = "", numeroVezes = 0;
+
+    for (var key in guardaValor) {
+    if (guardaValor[key] >= numeroVezes){
+        charRecorrente = key;
+        numeroVezes = guardaValor[key];
+        }
+    }
+      console.log(charRecorrente + ": " + numeroVezes);
+}
+
+maxCharacter("testar")
+
+4ºDesafio:Caractere mais recorrente
+
+function fizzBuzz() {
+    for (var i = 1; i <= 100; i++) {
+        var valor = "";
+        if (i % 3 === 0) valor += "Fizz";
+        if (i % 5 === 0) valor += "Buzz"
+            console.log(valor || i);
+    }
+}
+fizzBuzz()
